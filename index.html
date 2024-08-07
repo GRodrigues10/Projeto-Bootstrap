@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
+    <title>Cake Store</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon" href="imagens/cake-regular-24.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark col-12 navbar-expand-lg position-fixed" style="z-index: 999;">
+    <nav class="navbar p-4 navbar-dark bg-dark col-12 navbar-expand-lg position-fixed" style="z-index: 999;">
         <div class="container-fluid col-11 m-auto">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">CakeStore</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -20,11 +21,11 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#produtos">Produtos</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+              <li class="nav-item">
+                <a class="nav-link" href="#sobre">
+                  Sobre Nós
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -34,7 +35,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#contato">Contato</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -44,41 +45,59 @@
           </div>
         </div>
     </nav>
-    <br><br>
-    <div id="carouselExample" class="carousel slide">
+<br>
+<br>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators ">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imagens/img1.jpg" class="d-block w-100 img-fluid" alt="...">
+                <img src="imagens/img1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Barras de Chocolate Caseiro</h3>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="imagens/img2.jpg" class="d-block w-100 img-fluid" alt="...">
+                <img src="imagens/img2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Bolo de Morango</h3>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
             </div>
             <div class="carousel-item">
-                <img src="imagens/img3.jpg" class="d-block w-100 img-fluid" alt="...">
+                <img src="imagens/img3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <div class="container text-center mt-5">
+    <div class="container text-center mt-5" id="produtos" style="padding-top: 80px;">
         <h1>Produtos</h1>
     </div>
-
+   
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4 mb-3">
-                <div class="card">
+                <div class="card h-100">
                     <img src="imagens/img4.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text">Experimente o nosso delicioso Bolo de Fubá com Morango, Uvas e Calda de Morango e Chocolate Branco, uma verdadeira obra de arte que combina...</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">An item</li>
@@ -100,7 +119,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img src="imagens/img4.jpg" class="img-fluid" alt="">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni a harum aspernatur sequi, ex error expedita voluptate sunt. Quis aliquam fugit animi, minus aliquid dolor itaque aspernatur, debitis, dolorum nobis voluptas recusandae quam deleniti distinctio alias quos quia iste consectetur cupiditate velit omnis quas blanditiis repellendus nisi? Reprehenderit minus laudantium cupiditate? Dolore nam ipsa aliquam quas maiores neque sint! Odit, distinctio amet ipsa voluptatum repudiandae dicta beatae sint voluptatibus quod?</p>
+                                        <p>Experimente o nosso delicioso Bolo de Fubá com Morango, Uvas e Calda de Morango e Chocolate Branco, uma verdadeira obra de arte que combina sabores tradicionais com um toque moderno e sofisticado. Este bolo é a escolha perfeita para qualquer ocasião especial, desde aniversários até celebrações familiares.</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -112,7 +131,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-3">
-                <div class="card">
+                <div class="card h-100">
                     <img src="imagens/img5.jpg" class="card-img-top img-fluid" alt="..." style="background-attachment: fixed;">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -150,7 +169,7 @@
                 </div>
             </div>
             <div class="col-md-4 mb-3">
-                <div class="card">
+                <div class="card h-100">
                     <img src="imagens/img6.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -189,20 +208,57 @@
             </div>
         </div>
     </div>
-    <hr>
-    <div class="container">
-        <h2 class=" text-center">Sobre Nós</h2>
-        <p class="lead text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque exercitationem doloribus numquam repudiandae sint distinctio, iste molestiae qui dolore pariatur minus suscipit adipisci! Corporis tempore modi earum. Tenetur perferendis sapie suscipit adipisci! Corporis tempore modi earum. Tenetur perferendis sapiente rerum nulla unde laudantium sit, accusamus, maiores suscipit adipisci! Corporis tempore modi earum. Tenetur perferendis sapiente rerum nulla unde laudantium sit, accusamus, maiores ma mante rerum nulla unde laudantium sit, accusamus, maiores magnam non exercitationem, aliquid similique. Eum, iusto consequuntur ea facilis libero officia corporis!</p>
+    
+    <div class="container" style="padding-top: 80px;" id="sobre">
+        <h1 class=" text-center" >Sobre Nós</h1>
+        <p class="lead mt-5" style="text-align: justify;">Bem-vindo à <strong>CakeStore</strong>: A Doçura que Encanta Seus Sentidos
+
+            Na CakeStore, cada bolo é uma obra de arte, criada com paixão, carinho e os melhores ingredientes. Nossa missão é transformar seus momentos especiais em experiências memoráveis, oferecendo bolos que não apenas deliciam o paladar, mas também encantam os olhos.
+            
+            Variedade e Exclusividade
+            
+            Desde clássicos tradicionais até criações inovadoras, nossa variedade de bolos é projetada para atender a todos os gostos e ocasiões. Se você está comemorando um aniversário, casamento, ou simplesmente deseja saborear um pedaço de felicidade no seu dia a dia, na CakeStore você encontrará o bolo perfeito. Trabalhamos com sabores únicos e combinações exclusivas, como nosso aclamado Bolo de Fubá com Morango, Uvas e Calda de Morango e Chocolate Branco, que se tornou o favorito entre nossos clientes.
+            
+            Qualidade e Frescor Garantidos
+            
+            Na CakeStore, a qualidade é nossa prioridade. Utilizamos apenas os ingredientes mais frescos e de alta qualidade para garantir que cada fatia de bolo seja uma experiência sublime. Nossos confeiteiros experientes dedicam-se a cada detalhe, desde a seleção dos ingredientes até a decoração final, garantindo que cada bolo seja tão delicioso quanto bonito.
+            
+            Entrega Rápida e Confiável
+            
+            Sabemos que a pontualidade é essencial, especialmente quando se trata de comemorações especiais. Por isso, oferecemos um serviço de entrega rápido e confiável que leva nossos bolos fresquinhos diretamente até você. Quer você esteja planejando uma grande festa ou uma reunião íntima, na CakeStore, garantimos que seu bolo chegará sempre no tempo certo.
+            
+            Atendimento Personalizado
+            
+            Na CakeStore, cada cliente é especial. Nosso atendimento personalizado está aqui para ajudar você a escolher o bolo perfeito, responder a qualquer dúvida e garantir que sua experiência conosco seja excepcional do começo ao fim. Temos orgulho de oferecer um serviço amigável e atencioso, tornando cada compra uma experiência agradável e descomplicada.
+            
+            Fazendo Parte dos Seus Momentos Especiais
+            
+            Na CakeStore, não vendemos apenas bolos, criamos memórias. Entendemos a importância dos momentos especiais e nos dedicamos a fazer parte deles. Seja um bolo temático para o aniversário do seu filho ou um bolo elegante para um evento corporativo, nossa equipe está pronta para transformar suas ideias em deliciosas realidades.
+            
+            Venha Conhecer a CakeStore
+            
+            Convidamos você a explorar nosso site e descobrir a ampla variedade de bolos que temos a oferecer. Cada bolo na CakeStore é uma promessa de qualidade, frescor e sabor inigualável. Deixe-nos fazer parte dos seus momentos especiais e transformar cada ocasião em uma celebração inesquecível.
+            
+            CakeStore: Doçura em Cada Mordida
+            
+            Na CakeStore, acreditamos que cada momento merece ser doce e especial. Venha nos visitar e descubra por que somos a escolha favorita para bolos online. Faça seu pedido hoje e experimente a magia da CakeStore.
+            
+            
+            
+            
+            
+            
+            </p>
     </div>
     <hr>
     <div class="container">
-        <h2 class=" text-center">Contato</h2>
+        <h1 class=" text-center" id="contato">Contato</h1>
         <p class="lead text-center" style="font-size: 4rem; color: green;"><a href="https://" style="color: green;"><i class="fa-brands fa-whatsapp"></i></a></p>
     </div>
     <hr>
     <footer class="bg-dark p-3 text-center">
         <div>
-            <a href="/" style="color: white; text-decoration: none;">&copf; 2024 Gabriel Da Costa Rodrigues</a>
+            <a href="/" style="color: white; text-decoration: none;" target="_blank">&copf; 2024 Gabriel Da Costa Rodrigues</a>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oPZDnvTKEckYZcFZ66fcaD5Y2KpIUrScaGtK+Hlcf6E=" crossorigin="anonymous"></script>
@@ -210,6 +266,8 @@
         $('.navbar-nav>li>a').on('click', function(){
             $('.navbar-collapse').collapse('hide');
         });
+        
+
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>
